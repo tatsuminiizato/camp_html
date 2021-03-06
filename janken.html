@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>じゃんけん</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h3>じゃんけん</h3>
+    <hr>
+        <table width="100" border="2" align="center" cellpadding="5" cellspacing="2" bgcolor="#FFFF99">
+            <tr>
+                <th><div id="ahand"></div></th>
+                <th>VS</th>
+                <th><div id="bhand"></div></th>
+            </tr>
+
+            <tr>
+                <th>相手</th>
+                <td>&nbsp;</td>
+                <th>自分</th>
+            </tr>
+
+           
+
+            <tr>
+                <th colspan="3">
+                    <form name="janken">
+                    <table border="0" align="center">
+                        <tr>
+                            <td colspan="3"></td>
+                        </tr>
+                        <tr>
+                            <th class="b1"><input type="button" onClick="getbhand(0)" value="グー"></th>
+                            <th class="b2"><input  type="button" onClick="getbhand(1)" value="チョキ"></th>
+                            <th class="b3"><input  type="button" onClick="getbhand(2)" value="パー"></th>
+                        </tr>
+                    </table>
+                </form></th>
+            </tr>
+
+        </table>
+
+        <div class="aa11">
+            <img src="img/gu.png" alt="グー">
+            <img src="img/ch.png" alt="チョキ">
+            <img src="img/pa.png" alt="パー">
+        
+        </div>
+        
+  <script type="text/javascript">
+            hand = new Array("グー","チョキ","パー");
+             
+            function getbhand(btn) {
+               
+                r = Math.floor(Math.random() * 3);
+                document.getElementById("ahand").innerHTML = "<img src= .img/+ hand[r] + >"
+                document.getElementById("bhand").innerHTML = "<img src=..img/ + hand[btn] + >";
+            }
+   </script>
+    
+</body>
+</html>
+
+
+
+
